@@ -32,13 +32,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         reset()
     }
 
 
-    @IBAction func FirstStepperAction(_ sender: UIStepper) {
-        
+    @IBAction func StepperAction(_ sender: UIStepper) {
         FirstItemQtyTF.text =  String(Int(FirstStepper.value))
         SecondItemQtyTF.text = String(Int(SecondStepper.value))
         ThirdItemQtyTF.text = String(Int(ThirdStepper.value))
@@ -59,20 +57,25 @@ class ViewController: UIViewController {
     
     func reset() {
         ShoppingListNameTF.text = "My Shopping List"
-        FirstListItemTF.text = "Box of Cheerios"
+        FirstListItemTF.text = ""
         FirstItemQtyTF.text = "0"
+        FirstStepper.value = 0.0
         
-        SecondListItemTF.text = "Bag of Onion"
+        SecondListItemTF.text = ""
         SecondItemQtyTF.text = "0"
+        SecondStepper.value = 0.0
         
-        ThirdListItemTF.text = "Whole Milk"
+        ThirdListItemTF.text = ""
         ThirdItemQtyTF.text = "0"
+        ThirdStepper.value = 0.0
         
-        FourthListItemTF.text = "Whipped Cream"
+        FourthListItemTF.text = ""
         FourthItemQtyTF.text = "0"
+        FourthStepper.value = 0.0
         
-        FifthListItemTF.text = "Banana"
+        FifthListItemTF.text = ""
         FifthItemQtyTF.text = "0"
+        FifthStepper.value = 0.0
     }
 }
 
